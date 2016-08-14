@@ -1,0 +1,24 @@
+Q1. Find two missing numbers in an array of integers?
+    form the quadratic equation using sum of roots and multiplication of roots.
+    
+Q2. Find the uncommon elements from two list?
+    Use HahMap to store value, increment count for 1st list values by 1 while decrement count for 
+    2nd list values.
+    Program: UniqueElementsInTwoLists
+    
+Q3. How to find the square root of a given number?
+    Loop from 2 to half of the number 
+    
+
+    
+    
+To implement:
+1. How to find the kth largest/smallest element in an array? - Medians of medians
+2. Radix sort
+3. Bucket sort
+4. Shell sort
+5. Intersection of two sorted array in java?
+6. How to find the top two numbers in an array of integers
+7. How to find the smallest positive integer value that cannot be represented as sum of any subset of a given array?
+8. How to rearrange array in alternating positive and negative number?
+9. Find if there is a subarray with 0 sum - with hash map
