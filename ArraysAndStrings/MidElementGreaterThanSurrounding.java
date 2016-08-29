@@ -11,27 +11,44 @@ public static void main(String[] args) {
 	// 1,2,1,2,1,4,3,6,5,7,5,8,7
 	arrange(n);
 	System.out.println("using stack");
+	n=new int[]{1,1,1,2,2,3,4,5,5,6,7,7,8,9};
 	wiggleUsingStack(n);
 	System.out.println("wiggle");
 	wiggleSort(n); // [4, 9, 3, 8, 2, 7, 2, 7, 1, 6, 1, 5, 1, 5]
 }
+
+//wrong cannot guarantee correct answer
 public static void wiggleUsingStack(int[] n)
 {
 	Stack<Integer> stack1=new Stack<>();
 	Stack<Integer> stack2=new Stack<>();
 	stack1.push(n[0]);
 	boolean greater=true;
-	for(int i=1;i<n.length;i++){
-		if((greater && n[i]>stack1.peek()) || (!greater && n[i]<=stack1.peek()))
+	int i=1;
+	while(i<n.length){
+		System.out.println("stack1:"+stack1);
+		System.out.println("stack2:"+stack2);
+		
+		if(!stack2.isEmpty() && (greater && stack1.peek()<stack2.peek()) || (!greater && stack1.peek()>stack2.peek()))
+		{
+			stack1.push(stack2.pop());
+			greater=!greater;
+		}
+		else if((greater && n[i]>stack1.peek()) || (!greater && n[i]<stack1.peek()))
 			{
 			stack1.push(n[i]);
 			greater=!greater;
+			i++;
 			}
+	
 		else
 		{
-			stack1.push(stack2.pop());
 			stack2.push(n[i]);
+			i++;
 		}
+			
+		
+		
 			
 	}
 	System.out.println(stack1);

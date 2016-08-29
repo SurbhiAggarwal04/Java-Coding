@@ -23,7 +23,39 @@ public class MedianOfTwoSortedArrays
     	int k=(arr1.length+arr2.length)/2;
     	double med=median(arr1,0,arr1.length,arr2,0,arr2.length,k);
         System.out.println("Median = "+ med);
+        
+        System.out.println("version 3");
+        if((arr1.length+arr2.length)%2==0)
+        {
+        	double r1=medianOfTwoSortedArrays(arr1, 0, arr1.length, arr2, 0, arr2.length, (arr1.length+arr2.length)/2);
+        	double r2=medianOfTwoSortedArrays(arr1, 0, arr1.length, arr2, 0, arr2.length, (arr1.length+arr2.length)/2+1);
+        	System.out.println((r1+r2)/2);
+        }
+        else
+        {
+        	System.out.println(medianOfTwoSortedArrays(arr1, 0, arr1.length, arr2, 0, arr2.length, (arr1.length+arr2.length+1)/2));
+        }
      }
+    public static double medianOfTwoSortedArrays(int A[],int startA,int endA,int B[],int startB,int endB,int k)
+    {
+    	int n=endA-startA;
+    	int m=endB-startB;
+    	if(n<=0)return B[startB+k-1];
+    	if(m<=0)return A[startA+k-1];
+    	if(k==1)return A[startA]<B[startB]?A[startA]:B[startB];
+    	int midA=(startA+endA)/2;
+    	int midB=(startB+endB)/2;
+    	if(midA<=midB)
+    	{
+    		if(n/2+m/2+1>=k)return medianOfTwoSortedArrays(A, startA, endA, B, startB, midB, k);
+    		else return medianOfTwoSortedArrays(A, midA+1, endA, B, startB, endB, k-n/2-1);
+    	}
+    	else
+    	{
+       		if(n/2+m/2+1>=k)return medianOfTwoSortedArrays(A, startA, midA, B, startB, endB, k);
+    		else return medianOfTwoSortedArrays(A, startA, endA, B, midB+1, endB, k-m/2-1);
+    	}
+    }
      public static double median(int[] arr1, int[] arr2)
      {
          int N = arr1.length;

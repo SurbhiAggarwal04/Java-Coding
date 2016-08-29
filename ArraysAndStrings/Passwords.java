@@ -48,8 +48,7 @@ public class Passwords {
 			}
 			
 			outputStr += inputStr.charAt(position);
-			printPasswords(inputStr, position + 1, outputStr,cMap);
- 
+			printPasswords(inputStr, position + 1, outputStr,cMap); 
 	}
 	public static void main(String[] args) {
 		Map<Character, Character> cMap= new HashMap();

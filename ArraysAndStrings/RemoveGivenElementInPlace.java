@@ -1,5 +1,4 @@
 package ArraysAndStrings;
-
 import java.util.Arrays;
 
 public class RemoveGivenElementInPlace {
@@ -22,9 +21,7 @@ public static void remove1(int n[],int k)
 			i++;
 			index++;
 		}
-		else i++;
-		
-		
+		else i++;		
 	}
 	System.out.println(Arrays.toString(n));
 }

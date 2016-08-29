@@ -11,7 +11,7 @@ public class MissingNumber {
 		while(low<high)
 		{
 			mid = (low+high)/2;
- 
+            System.out.println("mid:"+mid);
 			if(mid-low == array[mid]- array[low])
 			{
 				if( mid+1< array.length && array[mid]+1 != array[mid+1])
@@ -31,7 +31,7 @@ public class MissingNumber {
 		return null;
 	}
 	public static void main(String[] args) {
-		System.out.println(missingNumber(new int[]{2,3,5,6,7,8,9,10,11,12,13,14,15 }));
+		System.out.println(missingNumber(new int[]{0,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }));
 	}
 
 }
