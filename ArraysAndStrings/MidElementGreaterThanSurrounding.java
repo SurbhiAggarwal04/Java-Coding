@@ -12,11 +12,33 @@ public static void main(String[] args) {
 	arrange(n);
 	System.out.println("using stack");
 	n=new int[]{1,1,1,2,2,3,4,5,5,6,7,7,8,9};
-	wiggleUsingStack(n);
+	//wiggleUsingStack(n);
 	System.out.println("wiggle");
 	wiggleSort(n); // [4, 9, 3, 8, 2, 7, 2, 7, 1, 6, 1, 5, 1, 5]
+	n=new int[]{1,1,1,2,2,3,4,5,5,6,7,7,8,9};
+	System.out.println("wiggle sort but in place");
+	inPlaceWiggle(n);
+	
 }
-
+public static void inPlaceWiggle(int n[])
+{
+	for(int i=1;i<n.length;i++)
+	{
+		if(i%2==0 && n[i]>n[i-1])
+		{
+			int temp=n[i];
+			n[i]=n[i-1];
+			n[i-1]=temp;
+		}
+		if(i%2==1 && n[i]<n[i-1])
+		{
+			int temp=n[i];
+			n[i]=n[i-1];
+			n[i-1]=temp;
+		}
+	}
+	System.out.println(Arrays.toString(n));
+}
 //wrong cannot guarantee correct answer
 public static void wiggleUsingStack(int[] n)
 {

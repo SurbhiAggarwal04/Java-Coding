@@ -1,9 +1,12 @@
 package ArraysAndStrings;
 
+import java.util.Arrays;
+
 public class LongedtCommonSubsequenceIn2Strings {
 public static void main(String[] args) {
 	System.out.println(find("BDCABA","ABCBDAB"));
 	System.out.println(longestCommonSubstring("BDCABA","ABCBDAB"));
+	longestCommonSubstringLength("BDCABA", "ABCBDAB");
 }
 public static String find(String A,String B)
 {
@@ -46,6 +49,27 @@ private static String longestCommonSubstring(String s1, String s2)
          }
     }
     return s1.substring(start, (start + length));
+}
+private static void longestCommonSubstringLength(String a, String b)
+{
+	int suffix[][]=new int[a.length()+1][b.length()+1];
+	int result=0;
+	for(int i=0;i<=a.length();i++)
+	{
+		for(int j=0;j<=b.length();j++)
+		{
+			if(i==0 || j==0)suffix[i][j]=0;
+			else if(a.charAt(i-1)==b.charAt(j-1))
+			{
+				suffix[i][j]=suffix[i-1][j-1]+1;
+				result=Math.max(result, suffix[i][j]);
+			}
+			else
+				suffix[i][j]=0;
+		}
+	}
+	for(int i=0;i<suffix.length;i++)
+	System.out.println(Arrays.toString(suffix[i]));
 }
 
 }

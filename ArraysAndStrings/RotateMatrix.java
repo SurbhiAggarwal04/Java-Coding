@@ -5,13 +5,13 @@ int matrix[][]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
 public static void main(String[] args) {
 	RotateMatrix ro=new RotateMatrix();
 	ro.display();
-	//ro.rotateByLeft();
+	ro.rotateByLeft();
 	//ro.display();
 	System.out.println();
 	/*ro.rotateByRight();
 	ro.display();*/
 	System.out.println();    //13951 141062 151173 161284
-	ro.rotateInPlace();
+	//ro.rotateInPlace();
 	ro.display();
 }
 public void rotateInPlace()

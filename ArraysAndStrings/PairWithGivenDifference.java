@@ -10,6 +10,7 @@ public static void main(String[] args) {
 	int n[]=new int[]{-1,-2,-3,-4,-5,-6,-7};
 	int diff=4;
 	Hashtable<Integer,Integer> table=new Hashtable<>();
+	n=new int[]{1,2,2,2,2,6,6,6,6};
 	for(int i=0;i<n.length;i++)
 	{
 		int diff1=n[i]-diff;
@@ -28,6 +29,7 @@ public static void main(String[] args) {
 	{
 		System.out.println(n[i]);
 	}*/
+	n=new int[]{1,2,2,2,2,2,6,6,6,6};
 	int i=0;
 	int j=1;
 	while(i<n.length && j<n.length)
