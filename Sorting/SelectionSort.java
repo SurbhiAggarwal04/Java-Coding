@@ -1,5 +1,8 @@
 package Sorting;
-
+/*
+ * Comlexity:
+ * Best Case, Average and Worst O(n^2)
+ */
 public class SelectionSort {
 int[] n;
 public SelectionSort(int []n) {

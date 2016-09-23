@@ -1,5 +1,9 @@
 package Sorting;
-
+/*
+ * Comlexity:
+ * Best Case, Average and Worst case O(nlogn)
+ *  
+ */
 public class MergeSort {
     static int n[];
    

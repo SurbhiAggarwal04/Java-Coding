@@ -1,5 +1,9 @@
 package Sorting;
-
+/*
+ * Comlexity:
+ * Best Case and Average caseO(nlogn)
+ * Worst O(n^2)
+ */
 public class QuickSort {
 	static int n[];
 

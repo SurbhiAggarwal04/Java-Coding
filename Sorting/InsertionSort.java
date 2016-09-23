@@ -1,5 +1,9 @@
 package Sorting;
-
+/*
+ * Comlexity:
+ * Best Case O(n)
+ * Average and Worst O(n^2)
+ */
 public class InsertionSort {
 
 	int n[];
