@@ -716,7 +716,7 @@ public class BinaryTree {
 						max);
 				node.leftChild = createTreeFromPostOrder(array, min, node.value);
 
-			}
+			}	
 		}
 		return node;
 	}

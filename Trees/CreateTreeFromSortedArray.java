@@ -1,4 +1,4 @@
-/*package Trees;
+package Trees;
 
 public class CreateTreeFromSortedArray {
 public static void main(String[] args) {
@@ -10,8 +10,8 @@ public static void main(String[] args) {
 public static BinaryTree createMinLenBSTVersion2(int arr[])
 {
 	BinaryTree tree = new BinaryTree();
-	//Node node = createMinLenBSTVersion2(arr, Integer.MIN_VALUE,Integer.MAX_VALUE );
-	tree.root = node;
+	Node node = createMinLenBST(arr, Integer.MIN_VALUE,Integer.MAX_VALUE );
+	tree.root=node;
 	tree.treeArray = arr;
 	return tree;
 }
@@ -45,4 +45,3 @@ public static Node createMinLenBST(int arr[], int start, int end) {
 
 }
 }
-*/
